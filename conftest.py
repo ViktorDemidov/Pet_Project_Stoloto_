@@ -3,11 +3,11 @@ import pytest
 
 
 
-@pytest.fixture()
+@pytest.fixture
 def browser():
-    print("\nstart browser for test..")
     browser = webdriver.Chrome(r"C:\Users\v.demidov\PycharmProjects\chromedriver.exe")
     browser.maximize_window()
-    yield browser
-    print("\nquit browser..")
-    browser.quit()
+    login = "user"
+    password = "KVkb24MSHF"
+    browser.get("https://{}:{}@tifa.stoloto.ru/".format(login, password))#обход алерта
+    return browser
