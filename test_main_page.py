@@ -3,8 +3,8 @@ import time
 
 
 def test_login_page(browser):
-    link = 'https://tifa.stoloto.ru/'
+    link = 'https://www.stoloto.ru/'
     page = MainPage(browser, link)
     page.open()
     page.auth_page()
-    time.sleep(15)
+    time.sleep(5)
