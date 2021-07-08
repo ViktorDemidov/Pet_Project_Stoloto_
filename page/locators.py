@@ -7,11 +7,6 @@ class LoginPageLocators:
     AUTH_PASSWORD = (By.XPATH, '//input[@id="auth_password"]')
     LOGIN_ENTER = (By.XPATH, '//span[@class="submit_button_container"]')
 
-
-class NickPageLocators:
-    NICK = (By.XPATH, '//a[@href="/private"]')
-
-
 class BonusPageLocators:
     LINK_BONUS = (By.XPATH, '//span[@class="available"]/a[@class="with_extra_active_area"]')
     CHECK_BONUS = (By.XPATH, '//div[@class="balance alt_links"]/p[@class="value"]/ins[@class="refresh_bonus_sum pseudo"]')
@@ -19,3 +14,11 @@ class BonusPageLocators:
     BONUS_3 = (By.XPATH, '//div[@id="composter__ticket"]')
     SUPER_KUZMITCH = (By.XPATH, '//div[@class="_104VHXFQ"]/div[@class="_3aUAViRB"]/div[@name="naperstki_bonusk"]')
     BUTTON_BUY = (By.XPATH, '//div[@class="C94ZXURa"]/button[@class="qkhhnR9C GXU9otnQ eyU4tGLN"]')
+    BUTTON_CONTINUE = (By.XPATH, '//div[@class="f6K2DpdV"]/button[@class="gameguide__btn qkhhnR9C GXU9otnQ eyU4tGLN"]')
+    BUTTON_CONTINUE_1 = (By.XPATH, '//div[@class="f6K2DpdV"]/button[@class="gameguide__btn qkhhnR9C GXU9otnQ eyU4tGLN"]')
+    BUTTON_CONTINUE_2 = (By.XPATH, '//div[@class="f6K2DpdV"]/button[@class="gameguide__btn qkhhnR9C GXU9otnQ eyU4tGLN"]')
+    BUTTON_CONTINUE_3 = (By.XPATH, '//div[@class="f6K2DpdV"]/button[@class="gameguide__btn qkhhnR9C GXU9otnQ eyU4tGLN"]')
+    BUTTON_CONTINUE_4 = (By.XPATH, '//div[@class="f6K2DpdV"]/button[@class="gameguide__btn qkhhnR9C GXU9otnQ eyU4tGLN"]')
+    BUTTON_CONTINUE_5 = (By.XPATH, '//div[@class="f6K2DpdV"]/button[@class="gameguide__btn qkhhnR9C GXU9otnQ eyU4tGLN"]')
+    BUTTON_CONTINUE_6 = (By.XPATH, '//div[@class="f6K2DpdV"]/button[@class="gameguide__btn qkhhnR9C GXU9otnQ eyU4tGLN"]')
+    BUTTON_START_GAME = (By.XPATH, '//div[@class="f6K2DpdV"]/button[@class="gameguide__btn qkhhnR9C GXU9otnQ eyU4tGLN"]')

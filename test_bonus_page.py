@@ -17,4 +17,5 @@ def test_buy_bonus_3(browser):
     page.open()
     page.auth_page()
     #page.check_bonus_page()
+    page = BonusPage(browser, link)
     page.buy_bonus_3()
