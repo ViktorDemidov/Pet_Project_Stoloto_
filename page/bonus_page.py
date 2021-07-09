@@ -16,7 +16,7 @@ class BonusPage(BasePage):  # не работает assert
     def buy_bonus_3(self):
         self.browser.find_element(*BonusPageLocators.LINK_BONUS).click()
         self.browser.find_element(*BonusPageLocators.PARTICIPATE_BONUS).click()
-        time.sleep(3)
+        time.sleep(3)# изменить на ожидание
         button_continue = self.browser.find_element(*BonusPageLocators.BUTTON_CONTINUE)
         for i in range(7):  # нажатие кнопки подрят 6 раз
             button_continue.click()
@@ -24,4 +24,6 @@ class BonusPage(BasePage):  # не работает assert
         self.browser.find_element(*BonusPageLocators.BONUS_3).click()
         self.browser.find_element(*BonusPageLocators.SUPER_KUZMITCH).click()
         self.browser.find_element(*BonusPageLocators.BUTTON_BUY).click()
+
+    
 
