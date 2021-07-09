@@ -7,6 +7,7 @@ class LoginPageLocators:
     AUTH_PASSWORD = (By.XPATH, '//input[@id="auth_password"]')
     LOGIN_ENTER = (By.XPATH, '//span[@class="submit_button_container"]')
 
+
 class BonusPageLocators:
     LINK_BONUS = (By.XPATH, '//span[@class="available"]/a[@class="with_extra_active_area"]')
     CHECK_BONUS = (By.XPATH, '//div[@class="balance alt_links"]/p[@class="value"]/ins[@class="refresh_bonus_sum pseudo"]')
