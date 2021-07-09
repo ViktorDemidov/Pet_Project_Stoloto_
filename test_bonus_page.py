@@ -1,5 +1,8 @@
+import pytest
+
 from page.bonus_page import BonusPage
 from page.main_page import MainPage
+from page.locators import BonusPageLocators
 import time
 
 
@@ -11,7 +14,12 @@ def test_check_bonus(browser):
     page.check_bonus_page()
 
 
-def test_buy_bonus_3(browser):
+@pytest.mark.parametrize('price', [
+    *BonusPageLocators.BONUS_3,
+    *BonusPageLocators.BONUS_9,
+    *BonusPageLocators.BONUS_30,
+    *BonusPageLocators.BONUS_90])
+def test_buy_bonus_3(browser, price):
     link = "https://tifa.stoloto.ru/"
     page = MainPage(browser, link)
     page.open()
