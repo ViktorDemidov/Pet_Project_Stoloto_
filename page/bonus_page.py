@@ -25,5 +25,5 @@ class BonusPage(BasePage):  # не работает assert
         self.browser.find_element(*BonusPageLocators.SUPER_KUZMITCH).click()
         self.browser.find_element(*BonusPageLocators.BUTTON_BUY).click()
 
-    
+
 
