@@ -31,7 +31,7 @@ class MainPage(BasePage):
         button_start_game.click()
         bonus_3 = self.browser.find_element(*BonusPageLocators.BONUS_3)
         bonus_3.click()
-        super_kuzmitch = self.browser.find_element(*BonusPageLocators.SUPER_KUZMITCH)
+        super_kuzmitch = self.browser.find_element(*BonusPageLocators.SUPER_KUZMITCH_3)
         super_kuzmitch.click()
         button_buy = self.browser.find_element(*BonusPageLocators.BUTTON_BUY)
         button_buy.click()
