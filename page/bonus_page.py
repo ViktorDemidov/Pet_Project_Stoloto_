@@ -21,7 +21,7 @@ class BonusPage(BasePage):  # не работает assert
         for i in range(7):  # нажатие кнопки подрят 6 раз
             button_continue.click()
         self.browser.find_element(*BonusPageLocators.BUTTON_START_GAME).click()
-        self.browser.find_element(price).click()
+        self.browser.find_element(*price).click()
         #добавить проверки с assert
         self.browser.find_element(*BonusPageLocators.SUPER_KUZMITCH).click()
         self.browser.find_element(*BonusPageLocators.BUTTON_BUY).click()
