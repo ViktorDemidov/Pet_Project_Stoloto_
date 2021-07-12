@@ -14,7 +14,7 @@ def test_check_bonus(browser):
     page.check_bonus_page()
 
 
-@pytest.mark.parametrize('price, super_kuzmitch', [
+@pytest.mark.parametrize('price, super_kuzmitch', [#использовал parametrize т.к у кнопки BONUS одинаковый локатор, а у игры Кузьмич, разные локаторы.Нажатик кнопок идет друг за другом
     (BonusPageLocators.BONUS_3, BonusPageLocators.SUPER_KUZMITCH_3),
     (BonusPageLocators.BONUS_9, BonusPageLocators.SUPER_KUZMITCH_9),
     (BonusPageLocators.BONUS_30, BonusPageLocators.SUPER_KUZMITCH_30),
