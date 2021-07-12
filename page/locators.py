@@ -12,7 +12,7 @@ class BonusPageLocators:
     LINK_BONUS = (By.XPATH, '//span[@class="available"]/a[@class="with_extra_active_area"]')
     CHECK_BONUS = (By.XPATH, '//div[@class="balance alt_links"]/p[@class="value"]/ins[@class="refresh_bonus_sum pseudo"]')
     PARTICIPATE_BONUS = (By.XPATH, '//div[@class="games_teaser pseudo"]/div[@class="bg"]')
-    BONUS_3 = (By.XPATH, '//div[@id="composter__ticket"]')
+    BONUS_3 = (By.XPATH, '//*[@id="gameguide__composter"]/div/div[2]')
     BONUS_9 = (By.XPATH, '//*[@id="gameguide__composter"]/div/div[3]')
     BONUS_30 = (By.XPATH, '//*[@id="gameguide__composter"]/div/div[4]')
     BONUS_90 = (By.XPATH, '//*[@id="gameguide__composter"]/div/div[5]')
