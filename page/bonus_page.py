@@ -1,7 +1,12 @@
+from conftest import browser
 from .base_page import BasePage
 from .main_page import MainPage
 from .locators import BonusPageLocators
 import time
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium import webdriver
 
 
 class BonusPage(BasePage):  # не работает assert
@@ -25,6 +30,13 @@ class BonusPage(BasePage):  # не работает assert
         #добавить проверки с assert
         self.browser.find_element(*super_kuzmitch).click()
         self.browser.find_element(*BonusPageLocators.BUTTON_BUY).click()
+        time.sleep(10)#сделать явное ожидаие
+        self.browser.find_element(*BonusPageLocators.BUTTON_UNDERSTAND).click()
+        time.sleep(10)
+        self.browser.find_element(*BonusPageLocators.BUTTON_GAME_1).click()
+        time.sleep(3)
+
+
 
 
 

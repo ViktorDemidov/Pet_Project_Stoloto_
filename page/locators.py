@@ -23,3 +23,6 @@ class BonusPageLocators:
     BUTTON_BUY = (By.XPATH, '//div[@class="C94ZXURa"]/button[@class="qkhhnR9C GXU9otnQ eyU4tGLN"]')
     BUTTON_CONTINUE = (By.XPATH, '//div[@class="f6K2DpdV"]/button[@class="gameguide__btn qkhhnR9C GXU9otnQ eyU4tGLN"]')
     BUTTON_START_GAME = (By.XPATH, '//div[@class="f6K2DpdV"]/button[@class="gameguide__btn qkhhnR9C GXU9otnQ eyU4tGLN"]')
+    BUTTON_UNDERSTAND = (By.XPATH, '//button[@class="_1Ht_WDf2 qkhhnR9C GXU9otnQ eyU4tGLN"]')
+    BUTTON_GAME = (By.XPATH, '//*[@id="app"]/div[1]/div[1]/div[2]/div[2]/div/div/div/div/main/div/div[2]/a')
+    BUTTON_GAME_1 = (By.XPATH, '//button[@class="qkhhnR9C GXU9otnQ eyU4tGLN _1FOkYbwB ysSC7RPq"]')
