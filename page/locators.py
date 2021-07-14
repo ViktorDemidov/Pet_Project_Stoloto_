@@ -26,3 +26,8 @@ class BonusPageLocators:
     BUTTON_UNDERSTAND = (By.XPATH, '//button[@class="_1Ht_WDf2 qkhhnR9C GXU9otnQ eyU4tGLN"]')
     BUTTON_GAME = (By.XPATH, '//*[@id="app"]/div[1]/div[1]/div[2]/div[2]/div/div/div/div/main/div/div[2]/a')
     BUTTON_GAME_1 = (By.XPATH, '//button[@class="qkhhnR9C GXU9otnQ eyU4tGLN _1FOkYbwB ysSC7RPq"]')
+
+
+class BuyTicketSpecialGameLocators:#Специгра
+    TICKET_SPECIALGAME = (By.XPATH, '//a[@href="/spec/game?draw=771"]')
+
