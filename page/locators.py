@@ -30,4 +30,10 @@ class BonusPageLocators:
 
 class BuyTicketSpecialGameLocators:#Специгра
     TICKET_SPECIALGAME = (By.XPATH, '//a[@href="/spec/game?draw=771"]')
+    QUANTITY_5 = (By.XPATH, '//*[@id="desktop-coupon"]/div/div/div/div/div[1]/div/div/div/div[2]/div/div[2]/label[1]/div/span')
+    BUTTON_PAYMENT_CARD = (By.XPATH, '//button[@class="dxyire-1 CMeWh"]')
+    BUTTON_VISA = (By.XPATH, '//button[@class="styles_bindingButton__2woLh"]')
+    INPUT_VISA = (By.XPATH, '//input[@id="cvc"]')
+    BUTTON_PAY = (By.XPATH, '//button[@data-test-id="cvc-submit"]')
+    CONFIRMATION_OF_PAYMENT = (By.XPATH, '//input[@id="password"]')
 

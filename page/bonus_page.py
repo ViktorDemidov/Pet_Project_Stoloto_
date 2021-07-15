@@ -19,7 +19,7 @@ class BonusPage(BasePage):  # не работает assert
         # assert check_bonus == "3"
         # 'Бонусов больше нуля'
 
-    def buy_bonus(self, price, super_kuzmitch):
+    def buy_bonus(self, price, super_kuzmitch):#бонусы на сайте временно не работают
         self.browser.find_element(*BonusPageLocators.LINK_BONUS).click()
         self.browser.find_element(*BonusPageLocators.PARTICIPATE_BONUS).click()
         time.sleep(3)  # изменить на ожидание
