@@ -15,5 +15,6 @@ class SpecialGamePage(BasePage):
         self.browser.find_element(*BuyTicketSpecialGameLocators.BUTTON_VISA).click()
         self.browser.find_element(*BuyTicketSpecialGameLocators.INPUT_VISA).send_keys(Keys.COMMAND + '123')#имитация клавиатуры
         self.browser.find_element(*BuyTicketSpecialGameLocators.BUTTON_PAY).click()
-        confirmation_of_payment = self.browser.find_element(BuyTicketSpecialGameLocators.CONFIRMATION_OF_PAYMENT).click()
-        confirmation_of_payment.send_keys(Keys.COMMAND + "12345678")
+        time.sleep(5)
+        self.browser.find_element(BuyTicketSpecialGameLocators.CONFIRMATION_OF_PAYMENT).click()
+        self.send_keys(Keys.COMMAND + '12345678')
