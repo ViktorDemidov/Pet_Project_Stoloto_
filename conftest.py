@@ -3,7 +3,7 @@ import pytest
 
 
 
-@pytest.fixture
+@pytest.fixture()
 def browser():
     browser = webdriver.Chrome(r"C:\Users\v.demidov\PycharmProjects\chromedriver.exe")
     browser.maximize_window()

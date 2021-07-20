@@ -5,6 +5,8 @@ from page.locators import BonusPageLocators
 from page.main_page import MainPage
 
 
+
+
 def test_check_bonus(browser):
     link = "https://tifa.stoloto.ru/"
     page = MainPage(browser, link)  # обращаемся к классу
