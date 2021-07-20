@@ -31,19 +31,19 @@ class BonusPage(BasePage):  # не работает assert
         # добавить проверки с assert
         self.browser.find_element(*super_kuzmitch).click()
         self.browser.find_element(*BonusPageLocators.BUTTON_BUY).click()
-        #time.sleep(10)#сделать явное ожидаие
-        button_1 = WebDriverWait(browser, 20).until(
-            EC.element_to_be_clickable((By.XPATH, '//button[@class="_1Ht_WDf2 qkhhnR9C GXU9otnQ eyU4tGLN"]')))
-        button_1.click()
-        #bot_1 = self.browser.find_element(*BonusPageLocators.BUTTON_UNDERSTAND)
-        #bot_1.click()# жду появление кнопки
+        WebDriverWait(self.browser, 10).until(EC.element_to_be_clickable((By.XPATH, '//button[text()="Понятно"]'))).click()
+        
+        '''
+        bot_1 = self.browser.find_element(*BonusPageLocators.BUTTON_UNDERSTAND)
+        bot_1.click()# жду появление кнопки
 
         button = WebDriverWait(browser, 20).until(
             EC.element_to_be_clickable((By.XPATH, '//button[@class="qkhhnR9C GXU9otnQ eyU4tGLN _1FOkYbwB ysSC7RPq"]')))
         button.click()
-        #self.browser.find_element(*BonusPageLocators.BUTTON_UNDERSTAND).click()# для нее сделать ожидание
-        #time.sleep(20)
-        #self.browser.find_element(*BonusPageLocators.BUTTON_GAME_1).click()
-        #time.sleep(3)
+        self.browser.find_element(*BonusPageLocators.BUTTON_UNDERSTAND).click()# для нее сделать ожидание
+        time.sleep(20)
+        self.browser.find_element(*BonusPageLocators.BUTTON_GAME_1).click()
+        time.sleep(3)
+        '''
 
 
