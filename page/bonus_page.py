@@ -15,25 +15,22 @@ class BonusPage(BasePage):  # не работает assert
         link_bonus = self.browser.find_element(*BonusPageLocators.LINK_BONUS)
         link_bonus.click()
         print('LINK_BONUS', link_bonus)
-        #check_bonus = self.browser.find_element(*BonusPageLocators.CHECK_BONUS).text
-        # assert check_bonus == "3"
-        # 'Бонусов больше нуля'
+
 
     def buy_bonus(self, price, super_kuzmitch):  # бонусы на сайте временно не работают
         self.browser.find_element(*BonusPageLocators.LINK_BONUS).click()
         self.browser.find_element(*BonusPageLocators.PARTICIPATE_BONUS).click()
-        time.sleep(3)  # изменить на ожидание
+        time.sleep(3)
         button_continue = WebDriverWait(self.browser, 10).until(EC.element_to_be_clickable((By.XPATH, '//div[@class="f6K2DpdV"]/button[@class="gameguide__btn qkhhnR9C GXU9otnQ eyU4tGLN"]')))
         for i in range(7):  # нажатие кнопки подрят 6 раз
             button_continue.click()
         self.browser.find_element(*BonusPageLocators.BUTTON_START_GAME).click()
         self.browser.find_element(*price).click()
-        # добавить проверки с assert
         self.browser.find_element(*super_kuzmitch).click()
         self.browser.find_element(*BonusPageLocators.BUTTON_BUY).click()
         WebDriverWait(self.browser, 10).until(EC.element_to_be_clickable((By.XPATH, '//button[text()="Понятно"]'))).click()
         WebDriverWait(self.browser, 30).until(EC.element_to_be_clickable((By.XPATH, '//button[text()="Играть"]'))).click()
-
+        assert self.is_element_present(*BonusPageLocators.RULES), 'Very well'
 
 
 

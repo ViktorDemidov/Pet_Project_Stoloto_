@@ -6,15 +6,16 @@ from selenium.webdriver.common.keys import Keys
 
 
 class SpecialGamePage(BasePage):
-    def buy_ticket_5(self):
+    def buy_ticket_5_card(self):
         self.browser.execute_script("window.scrollBy (0, 200);")
         self.browser.find_element(*BuyTicketSpecialGameLocators.TICKET_SPECIALGAME).click()
         self.browser.find_element(*BuyTicketSpecialGameLocators.QUANTITY_5).click()
-        self.browser.find_element(*BuyTicketSpecialGameLocators.BUTTON_PAYMENT_CARD).click()
-        time.sleep(7)#изменить на неявное ожидание
-        self.browser.find_element(*BuyTicketSpecialGameLocators.BUTTON_VISA).click()
-        self.browser.find_element(*BuyTicketSpecialGameLocators.INPUT_VISA).send_keys(Keys.COMMAND + '123')#имитация клавиатуры
+        self.browser.find_element(*BuyTicketSpecialGameLocators.BUTTON_ALL_WAYS).click()
+        self.browser.find_element(*BuyTicketSpecialGameLocators.BUTTON_BANK_CARD).click()
+        time.sleep(10)
+        self.browser.find_element(*BuyTicketSpecialGameLocators.INPUT_NUMBER_CARD).send_keys("4111111111111111")
+        self.browser.find_element(*BuyTicketSpecialGameLocators.INPUT_MONTH_CARD).send_keys("12")
+        self.browser.find_element(*BuyTicketSpecialGameLocators.INPUT_YEARS_CARD).send_keys("24")
+        self.browser.find_element(*BuyTicketSpecialGameLocators.INPUT_CVC_CARD).send_keys("123")
         self.browser.find_element(*BuyTicketSpecialGameLocators.BUTTON_PAY).click()
-        time.sleep(5)
-        self.browser.find_element(BuyTicketSpecialGameLocators.CONFIRMATION_OF_PAYMENT).click()
-        self.send_keys(Keys.COMMAND + '12345678')
+        assert self.is_element_present(*BuyTicketSpecialGameLocators.PAYMENT), "Very well"

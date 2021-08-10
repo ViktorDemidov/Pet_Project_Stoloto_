@@ -6,10 +6,10 @@ from page.locators import BuyTicketSpecialGameLocators
 from page.special_game_page import SpecialGamePage
 
 
-def test_buy_ticket_3(browser):
+def test_buy_ticket(browser):
     link = "https://tifa.stoloto.ru/"
     page = MainPage(browser, link)
     page.open()
     page.auth_page()
     page = SpecialGamePage(browser, link)
-    page.buy_ticket_5()
+    page.buy_ticket_5_card()
